@@ -18,11 +18,6 @@ def get_username(message):
     print(repos)
     for i in repos:
         bot.send_message(message.chat.id, i)
-    # message.entities[0].type
-
-
-    # message2 = bot.send_message(message.chat.id, "Thank you for your query")
-
 
 def get_repos(user_name):
     url =f'https://github.com/{user_name}?tab=repositories'
@@ -39,8 +34,6 @@ def get_repos(user_name):
         return l2
     else:
         print("Incorrect username")
-
-
 
 
 bot.polling()
